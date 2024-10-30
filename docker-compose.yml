@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  react-app:
+    build: .
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./src:/app/src
+    stdin_open: true
+    tty: true
